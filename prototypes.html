@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+
+        Object.prototype.asdf = 'Kim';
+
+        Function.prototype.asdf = 'Hamid';
+
+        var date = new Date();
+
+        console.log(date.asdf);
+
+        function Person(){
+
+        }
+
+        console.log('Person.asdf = ' + Person.asdf);
+        // Person.prototype.asdf = 'Jacob';
+
+        var jacob = new Person();
+
+        // jacob's prototype attribute point to?
+        // what is the parent of the jacob object?
+        // Parent --> Person.prototype
+
+        console.log('jacob.asdf = ' + jacob.asdf);
+
+
+        // defining properties
+        // defining attributes of property
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

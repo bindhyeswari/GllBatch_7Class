@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="data.js"></script>
+    <script>
+
+
+        test();
+
+        function test(){
+            console.log(arr_ca_county[0]);
+
+            
+        }
+
+        function printNames(){
+
+            var obj = {
+                id: 32,
+                name: {
+                    firstname: 'Hamid',
+                    lastname: 'Hoseini'
+                },
+                getLastName: function(){
+                    return this.name.lastname;
+                },
+                toString: function(){
+                    return this.name.firstname + ' ' + this.name.lastname;
+                }
+            };
+
+            function printLastname(x){
+                return x.name.lastname;
+            }
+
+            console.log(printLastname(obj));
+            console.log(obj.getLastName());
+
+            console.log(obj.toString());
+        }
+
+        function arrayMethods(){
+            // reduce and filter methods
+            var arr = [45,52,8,7,9,4,56,63,21];
+
+            /*var sum = 0;
+            for (var i = 0; i < arr.length; i++) {
+                sum = sum + arr[i];
+            }*/
+
+            function add(x, y){
+                return x * y;
+            }
+
+            var sum = arr.reduce(add);
+
+            console.log(sum);
+
+            var arr_objects = [{
+                id: 32,
+                name: 'Jacob'
+            },{
+                id: 64,
+                name: 'Kim'
+            },{
+                id: 128,
+                name: 'Han'
+            },{
+                id: 256,
+                name: 'Hamid'
+            }];
+
+            arr_objects.unshift('');
+
+            function reduceNames (str, obj2) {
+                return str + ', ' + obj2.name;
+            }
+
+            var allnames = arr_objects.reduce(reduceNames);
+            console.log(allnames);
+
+        }
+
+
+        function getAllNames(){
+
+            var arr_names = [];
+            var arr_objects = [{
+                id: 32,
+                name: 'Jacob'
+            },{
+                id: 64,
+                name: 'Kim'
+            },{
+                id: 128,
+                name: 'Han'
+            },{
+                id: 256,
+                name: 'Hamid'
+            }];
+
+            // function which takes an object as input and returns the obj.name
+
+            function getName(obj){
+                return obj.name;
+            }
+
+            arr_names = arr_objects.map(getName);
+            // map method
+
+            console.log(arr_names); // 'Jacob'
+
+        }
+
+
+        function mapper(){
+            // Map the array elements [1,2,3,4] to a new array [1,4,9,16]
+
+            var arr_numbers = [1, 2, 3, 4];
+            var arr_squares = [];
+
+            // loop over all the elements of the array of numbers
+            /*for (var i = 0; i < arr_numbers.length; i++){
+                // Pick the element and square it
+                var element = arr_numbers[i];
+                console.log('The element at the index:' + i + ' is ' + element);
+                var squared = element * element;
+                console.log('The square of ' + element + ' is ' + squared);
+                arr_squares.push(squared);
+                console.log(arr_squares);
+            }*/
+
+            function square(x){
+                return x * x;
+            }
+
+            arr_squares = arr_numbers.map(square);
+
+            console.log(arr_squares);
+
+        }
+
+        function arrayOfFunctions(){
+            // Declares an array of functions and invokes them in a loop
+
+            var array_of_functions = [
+                function sayHello(){
+                    console.log('Hello from Javascript');
+                },
+                function sayOla(){
+                    console.log('Ola from Javascript');
+                }
+            ];
+
+            // Loop over all the elements of the array
+            for (var i = 0; i < array_of_functions.length; i++) {
+                array_of_functions[i]();
+            }
+
+        }
+
+        function printToConsole(){
+            console.log('This page is about arrays...');
+        }
+
+    </script>
+</head>
+<body>
+
+    <div>
+        <span>Marina</span>
+        <a href="http://www.ci.marina.ca.us/" target="_blank">Link to Marina County</a>
+        <a href="https://www.google.com/maps/@36.68,-121.8,15z" target="_blank">Marina county on google maps</a>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="data.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function(){
+
+            // for loop to access all elements of the arr_counties array - copied from sba gov
+            for (var i = 0; i < arr_counties.length; i++){
+
+                // create a new div element
+                var div = document.createElement('div');
+
+                // set the innerHTML of the element to the name of county
+                div.innerHTML = arr_counties[i].name;
+
+                // apply the class county to the div
+                div.className = 'county';
+
+                // add the div element to the body
+                document.body.appendChild(div);
+            }
+
+        });
+    </script>
+
+    <style>
+
+    </style>
+</head>
+<body>
+
+</body>
+</html>
